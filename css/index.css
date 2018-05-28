@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+:root {
+    font-family: 'Nunito Sans', Arial;
+}
+
+body {
+    max-width: 960px;
+    margin: auto;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav h1 {
+    text-transform: uppercase;
+    font-size: 1.09rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: 0 2%;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+header nav .cart-item {
+    margin-left: auto;
+}
+
+header .jumbotron {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/products/tesla.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header .jumbotron h2 {
+    color: white;
+}
+
+.product-card {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#2980b9));
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 40%;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3cb0fd), to(#3498db));
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+
+@media (min-width: 600px) {
+    .products-list {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .products-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .products-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
